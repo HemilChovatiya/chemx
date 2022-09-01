@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: monospace;
+        }
+
+        nav {
+            background: #0082e6;
+            height: 80px;
+            width: 100%;
+        }
+
+        label.logo {
+            color: white;
+            font-size: 35px;
+            line-height: 80px;
+            padding: 0 100px;
+            font-weight: bold;
+        }
+
+        span[class="logo1"] {
+            color: #e60000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            float: right;
+            margin-right: 20px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 17px;
+            padding: 7px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        nav li a.active,
+        a:hover {
+            background: #1b9bff;
+            transition: .5s;
+        }
+
+        .checkbtn {
+            font-size: 30px;
+            color: white;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #check {
+            display: none;
+        }
+
+        @media (max-width: 952px) {
+            label.logo {
+                font-size: 30px;
+                padding-left: 50px;
+
+            }
+
+            nav ul li a {
+                font-size: 16px;
+            }
+
+        }
+
+        @media(max-width: 858px) {
+            .checkbtn {
+                display: block;
+            }
+
+            ul {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #2c3e50;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all ease.5s;
+            }
+
+            nav ul li {
+                display: block;
+
+            }
+
+            nav ul li a {
+                font-size: 20px;
+            }
+
+            nav li a.active,
+            a:hover {
+                background: none;
+                color: #0082e6;
+            }
+
+            #check:checked~ul {
+                left: 0;
+            }
+        }
+
+        section[class="background"] {
+            background: url(icons/undraw_scientist_0ft9.svg) no-repeat;
+            background-size: calc(100% - 80px) calc(100vh - 80px);
+            height: 800px;
+            width: 1300px;
+            /*height: calc(100vh - 80px);*/
+        }
+
+        section {
+
+            background-size: initial;
+            background-size: auto;
+            height: 800px;
+            width: 1300px;
+            /*height: calc(100vh - 80px);*/
+        }
+
+        .grand_parent {
+            width: 100vw;
+            height: 100vh;
+            background: #dfe6e9;
+            color: rgb(46, 39, 39);
+        }
+
+        .grand_parent h1{
+            font-size: 4rem;
+            padding: 20px 0;
+            text-align: center;
+            color: #000;
+        }
+
+        .grand_parent .child p {
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .parents {
+            width: 80vw;
+            height: auto;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            transition: all 0.2 linear;
+        }
+
+        .child {
+            height: 200px;
+            background: #ffffff;
+            box-shadow: 0 0 20px #bac3c3;
+            flex: 1 1 200px;
+            margin: 20px;
+        }
+
+
+        @media (max-width: 768px) {
+            .grand_parent {
+                height: auto;
+            }
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label for="" class="logo">Chem<span class="logo1">X</span></label>
+        <ul class="">
+            <li class="">
+                <a href="#" class="active" id="">Home</a>
+            </li>
+            <li class="">
+                <a href="#" class="" id="">Contact-us</a>
+            </li>
+            <li class="">
+                <a href="#" class="" id="">About-us</a>
+            </li>
+            <li class="">
+                <a href="#" class="" id="">Inquiry-Product</a>
+            </li>
+            <li class="">
+                <a href="#" class="" id="">Feedback</a>
+            </li>
+        </ul>
+    </nav>
+    <section class="background">
+
+    </section>
+    <section class="bck">
+
+        <div class="grand_parent">
+            <h1> Services </h1>
+            <div class="parents">
+                <div class="child">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati officia nostrum eveniet at
+                        veniam voluptatum. Rem tempore consequatur voluptatem possimus molestiae delectus, sit vero
+                        itaque sapiente enim dolorem eos vel!</p>
+                </div>
+                <div class="child">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab atque officiis totam quam dolorum
+                        aut, magnam commodi est culpa molestias soluta hic similique adipisci blanditiis earum laborum,
+                        optio alias sequi?</p>
+                </div>
+                <div class="child">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure mollitia magni error, repellat
+                        laudantium odio. Sequi esse voluptatibus unde a non earum eum, qui quas labore, sunt repudiandae
+                        laborum vel?</p>
+                </div>
+               
+
+            </div>
+        </div>
+
+
+    </section>
+
+</body>
+
+</html>
